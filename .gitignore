@@ -1,0 +1,16 @@
+node_modules/
+.expo/
+
+ios/Pods/
+
+build/
+.gradle/
+local.properties
+.idea/
+*.iml
+
+.DS_Store
+package-lock.json
+yarn.lock
+Podfile.lock
+android
