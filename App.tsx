@@ -55,7 +55,7 @@ function App(): JSX.Element {
     autoplay = !autoplay
     player.changeAutoplay(autoplay)
   }
-  const changeMuted = () => {
+  const changeMuted = () => { 
     muted = !muted
     player.changeMuted(muted)
   }
@@ -81,8 +81,7 @@ function App(): JSX.Element {
             <Button title="AutoPlay" onPress={changeAutoplay} /> 
             <Button title="Muted" onPress={changeMuted} /> 
             <Button title="Controls" onPress={changeControls} /> 
-          </View>
-
+          </View> 
           <MlyPlayer  
               src={url} 
               autoplay={autoplay}
