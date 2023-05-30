@@ -1,5 +1,6 @@
 import React from 'react';
 import type {PropsWithChildren} from 'react';
+import { useState } from 'react';
 import {
   SafeAreaView,
   ScrollView, 
@@ -18,20 +19,28 @@ import {
 
 import MlyPlayer from './MlyPlayer.js';
   
-function App(): JSX.Element {
+function App(): JSX.Element { 
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  const window = Dimensions.get("window");
-  const width = window.width;
-  const height = width * 12 / 16 + 1;
+  const [playerWidth, setPlayerWidth] = useState(0);
+  const [playerHeight, setPlayerHeight] = useState(0);
 
+  const handleLayout = (event) => {
+    const { width, height } = event.nativeEvent.layout;
+    const aspectRatio = 16 / 9; 
+    const newWidth = Math.min(width, height * aspectRatio);
+    const newHeight = newWidth / aspectRatio;
+    setPlayerWidth(newWidth);
+    setPlayerHeight(newHeight);
+  };
+ 
   var autoplay = true;
   var muted = false;
-  var controls = false;
+  var controls = true;
 
   const url = 'https://vsp-stream.s3.ap-northeast-1.amazonaws.com/HLS/raw/SpaceX.m3u8'
   const result = NativeModules.MLYDriver.initialize('cegh8d9j11u91ba1u600');
@@ -69,7 +78,6 @@ function App(): JSX.Element {
         <ScrollView style={backgroundStyle} >  
           <Header/>
           
-
           <View style={{flexDirection:'row'}}>
             <Button title="Pause" onPress={pause} />      
             <Button title="Resume" onPress={resume} />            
@@ -82,21 +90,19 @@ function App(): JSX.Element {
             <Button title="Muted" onPress={changeMuted} /> 
             <Button title="Controls" onPress={changeControls} /> 
           </View> 
-          <MlyPlayer  
-              src={url} 
-              autoplay={autoplay}
-              muted={muted}
-              controls={controls} 
-              style={
-                      { 
-                        width, 
-                        height, 
-                        backgroundColor: 'black' 
-                      }
-                }
-            />
-          
-
+          <View style={{ aspectRatio: 16 / 9 }} onLayout={handleLayout}>
+              <MlyPlayer  
+                src={url} 
+                autoplay={autoplay}
+                muted={muted}
+                controls={controls} 
+                style={{ 
+                  width: playerWidth, 
+                  height: playerHeight,
+                  backgroundColor: 'black' 
+                }}
+              />
+          </View>
         </ScrollView> 
          
     </SafeAreaView>

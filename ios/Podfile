@@ -23,14 +23,13 @@ end
 
 target 'mlysdkDemo' do
   platform :ios, '14.0'
-#  use_frameworks!
+  # use_frameworks!
   pod 'MLYSDK',:git => 'https://github.com/mlytics/mly-stream-sdk-avplayer.git'
   
   use_modular_headers!
   
   config = use_native_modules!
   
-
   # Flags change depending on the env values.
   flags = get_default_flags()
 
@@ -71,8 +70,14 @@ target 'mlysdkDemo' do
         config.build_settings['SWIFT_VERSION'] = '5.0'
       end
     end
+    
+    installer.pods_project.build_configurations.each do |config|
+      config.build_settings['OTHER_SWIFT_FLAGS'] ||= []
+      config.build_settings['OTHER_SWIFT_FLAGS'] << '-no-verify-emitted-module-interface'
+    end
      
-  end
+  end 
+ 
   
   static_frameworks = ['MLYSDK','YogaKit','Yoga']
   pre_install do |installer|
