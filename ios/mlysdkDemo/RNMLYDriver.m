@@ -5,45 +5,29 @@
 
 @implementation RNMLYDriver
 
-RCT_EXPORT_MODULE(MLYDriver);
-
-
-RCT_REMAP_METHOD(initializeWithServer, clientID: (NSString *)clientID server:(NSString *)server debug:(BOOL)debug resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
-  
-    RCTLogInfo(@"initialize clientID:%@ server:%@ debug: %d", clientID, server, debug);
-  
-    NSDictionary *result = [[NSDictionary alloc]init];
+RCT_EXPORT_MODULE(MlyDriver);
+ 
+RCT_REMAP_METHOD(init, result: (NSDictionary *)result resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
+    RCTLogInfo(@"init options:%@", result);
+   
     NSError *error = nil;
-    [MLYDriver initializeAndReturnError: &error :^(MLYDriverOptions * options) {
-      [[options client] setId:clientID];
-      if( server != nil) {
-        [[[options server] host] setFqdn:server];
-      }
-      [options setDebug: debug];
+    [MLYDriver initializeAndReturnError:&error :^(MLYDriverOptions *options) {
+        NSString *clientID = result[@"clientId"];
+        NSString *server = result[@"server"];
+        BOOL debug = [result[@"debug"] boolValue];
+      
+        [[options client] setId:clientID];
+        if( server != nil) {
+          [[[options server] host] setFqdn:server];
+        }
+        [options setDebug:debug];
     }];
   
-  if (error) {
-    reject(@"MLYSDK initialize error", error.description, error);
-  } else {
-    resolve(result);
-  }
-}
-
-RCT_REMAP_METHOD(initialize, clientID: (NSString *)clientID resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
-  
-    RCTLogInfo(@"initialize clientID:%@", clientID);
-  
-    NSDictionary *result = [[NSDictionary alloc]init];
-    NSError *error = nil;
-    [MLYDriver initializeAndReturnError: &error :^(MLYDriverOptions * options) {
-      [[options client] setId:clientID];
-    }];
-  
-  if (error) {
-    reject(@"MLYSDK initialize error", error.description, error);
-  } else {
-    resolve(result);
-  }
+    if (error) {
+        reject(@"MLYSDK init error", error.description, error);
+    } else {
+        resolve(@"MLYSDK init success");
+    }
 }
 
 @end

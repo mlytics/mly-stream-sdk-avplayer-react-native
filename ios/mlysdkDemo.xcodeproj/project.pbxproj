@@ -7,27 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* mlysdkDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* mlysdkDemoTests.m */; };
+		065DF2742A8F76D700252317 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065DF2732A8F76D700252317 /* CoreFoundation.framework */; };
 		06F5DB682A1DFA870051E0DE /* RNMLYDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F5DB672A1DFA870051E0DE /* RNMLYDriver.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1C0E88E10068000D4D7C204D /* libPods-mlysdkDemo-mlysdkDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A15765AC570CB056FE588B87 /* libPods-mlysdkDemo-mlysdkDemoTests.a */; };
 		323189812A167920004B96EB /* MLYAVPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 323189802A167920004B96EB /* MLYAVPlayerManager.m */; };
 		32C4EF2C2A2105430005A9EA /* SwiftBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C4EF2B2A2105430005A9EA /* SwiftBridge.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		DEDE68C2FA1AAE5AE169DAA5 /* libPods-mlysdkDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E54F4D60B2698FE82FE5D04 /* libPods-mlysdkDemo.a */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = mlysdkDemo;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		06A944602A249A1A00C189C5 /* Embed Frameworks */ = {
@@ -43,10 +32,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* mlysdkDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mlysdkDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* mlysdkDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mlysdkDemoTests.m; sourceTree = "<group>"; };
 		03C02961378DA4D2FF8F4FC6 /* Pods-mlysdkDemo-mlysdkDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mlysdkDemo-mlysdkDemoTests.release.xcconfig"; path = "Target Support Files/Pods-mlysdkDemo-mlysdkDemoTests/Pods-mlysdkDemo-mlysdkDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		065DF2732A8F76D700252317 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		06F5DB662A1DFA870051E0DE /* RNMLYDriver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RNMLYDriver.h; path = mlysdkDemo/RNMLYDriver.h; sourceTree = "<group>"; };
 		06F5DB672A1DFA870051E0DE /* RNMLYDriver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RNMLYDriver.m; path = mlysdkDemo/RNMLYDriver.m; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* mlysdkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mlysdkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,18 +56,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		00E356EB1AD99517003FC87E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1C0E88E10068000D4D7C204D /* libPods-mlysdkDemo-mlysdkDemoTests.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				065DF2742A8F76D700252317 /* CoreFoundation.framework in Frameworks */,
 				DEDE68C2FA1AAE5AE169DAA5 /* libPods-mlysdkDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,23 +68,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* mlysdkDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				00E356F21AD99517003FC87E /* mlysdkDemoTests.m */,
-				00E356F01AD99517003FC87E /* Supporting Files */,
-			);
-			path = mlysdkDemoTests;
-			sourceTree = "<group>";
-		};
-		00E356F01AD99517003FC87E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				00E356F11AD99517003FC87E /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		13B07FAE1A68108700A75B9A /* mlysdkDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +90,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				065DF2732A8F76D700252317 /* CoreFoundation.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				7E54F4D60B2698FE82FE5D04 /* libPods-mlysdkDemo.a */,
 				A15765AC570CB056FE588B87 /* libPods-mlysdkDemo-mlysdkDemoTests.a */,
@@ -146,7 +110,6 @@
 			children = (
 				13B07FAE1A68108700A75B9A /* mlysdkDemo */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* mlysdkDemoTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -160,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* mlysdkDemo.app */,
-				00E356EE1AD99517003FC87E /* mlysdkDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,27 +141,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* mlysdkDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "mlysdkDemoTests" */;
-			buildPhases = (
-				CB815CF617AC0EFE41B6D3E3 /* [CP] Check Pods Manifest.lock */,
-				00E356EA1AD99517003FC87E /* Sources */,
-				00E356EB1AD99517003FC87E /* Frameworks */,
-				00E356EC1AD99517003FC87E /* Resources */,
-				4B0D3983DDFFB82ACCAB4DC2 /* [CP] Embed Pods Frameworks */,
-				C3951C0009389999C2E38958 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				00E356F51AD99517003FC87E /* PBXTargetDependency */,
-			);
-			name = mlysdkDemoTests;
-			productName = mlysdkDemoTests;
-			productReference = 00E356EE1AD99517003FC87E /* mlysdkDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		13B07F861A680F5B00A75B9A /* mlysdkDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "mlysdkDemo" */;
@@ -231,10 +172,6 @@
 			attributes = {
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
-					00E356ED1AD99517003FC87E = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 13B07F861A680F5B00A75B9A;
-					};
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1430;
 					};
@@ -254,19 +191,11 @@
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* mlysdkDemo */,
-				00E356ED1AD99517003FC87E /* mlysdkDemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		00E356EC1AD99517003FC87E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8E1A680F5B00A75B9A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -329,23 +258,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mlysdkDemo/Pods-mlysdkDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4B0D3983DDFFB82ACCAB4DC2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-mlysdkDemo-mlysdkDemoTests/Pods-mlysdkDemo-mlysdkDemoTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-mlysdkDemo-mlysdkDemoTests/Pods-mlysdkDemo-mlysdkDemoTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mlysdkDemo-mlysdkDemoTests/Pods-mlysdkDemo-mlysdkDemoTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		672D011366504E5812149388 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,45 +274,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-mlysdkDemo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C3951C0009389999C2E38958 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-mlysdkDemo-mlysdkDemoTests/Pods-mlysdkDemo-mlysdkDemoTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-mlysdkDemo-mlysdkDemoTests/Pods-mlysdkDemo-mlysdkDemoTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mlysdkDemo-mlysdkDemoTests/Pods-mlysdkDemo-mlysdkDemoTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CB815CF617AC0EFE41B6D3E3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-mlysdkDemo-mlysdkDemoTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -427,14 +300,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		00E356EA1AD99517003FC87E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				00E356F31AD99517003FC87E /* mlysdkDemoTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F871A680F5B00A75B9A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -449,70 +314,7 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* mlysdkDemo */;
-			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		00E356F61AD99517003FC87E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A504008D0382AFF6FE1DF603 /* Pods-mlysdkDemo-mlysdkDemoTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = BXKWR2LZDX;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = mlysdkDemoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-					"$(inherited)",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mlysdkDemo.app/mlysdkDemo";
-			};
-			name = Debug;
-		};
-		00E356F71AD99517003FC87E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03C02961378DA4D2FF8F4FC6 /* Pods-mlysdkDemo-mlysdkDemoTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = BXKWR2LZDX;
-				INFOPLIST_FILE = mlysdkDemoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-					"$(inherited)",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mlysdkDemo.app/mlysdkDemo";
-			};
-			name = Release;
-		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6D87BE784B55BE05A02461ED /* Pods-mlysdkDemo.debug.xcconfig */;
@@ -632,6 +434,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "$(inherited)";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-DFOLLY_NO_CONFIG",
@@ -696,6 +499,7 @@
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = "$(inherited)";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-DFOLLY_NO_CONFIG",
@@ -711,15 +515,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "mlysdkDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				00E356F61AD99517003FC87E /* Debug */,
-				00E356F71AD99517003FC87E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "mlysdkDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -3,11 +3,11 @@
 #import <React/RCTViewManager.h>
 #import <AVKit/AVKit.h>
 #import <React/RCTLog.h>
-@import MLYSDK;
+@import MLYAVPlayer;
 
 @implementation MLYAVPlayerManager
 
-RCT_EXPORT_MODULE(MLYPlayer)
+RCT_EXPORT_MODULE(RCTMlyPlayer)
 
 MLYPlayerManger *manager;
 
@@ -28,7 +28,12 @@ RCT_CUSTOM_VIEW_PROPERTY(controls, BOOL, UIView){
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(autoplay, BOOL, UIView){
-  [manager autoplay: [json boolValue]];
+  BOOL tmp = [json boolValue];
+  if (tmp) {
+    [manager autoplay: [json boolValue]];
+  }else{
+    [manager pause];
+  }
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(muted, BOOL, UIView){
@@ -36,11 +41,11 @@ RCT_CUSTOM_VIEW_PROPERTY(muted, BOOL, UIView){
 }
 
 RCT_EXPORT_METHOD(play) {
-[manager play];
+  [manager play];
 }
 
 RCT_EXPORT_METHOD(playWith:(NSString *)src) {
-  [manager playWith:src];
+  [manager playWithSrc:src];
 }
 
 RCT_EXPORT_METHOD(pause) {
@@ -63,5 +68,16 @@ RCT_EXPORT_METHOD(changeAutoplay:(BOOL)y) {
   [manager autoplay:y];
 }
 
+RCT_EXPORT_METHOD(setLatency:(double)latency) {
+  [manager setLatency:latency];
+}
+ 
+RCT_CUSTOM_VIEW_PROPERTY(isMonitorAllowed, BOOL, UIView){
+  [manager isMonitorAllowed: [json boolValue]];
+}
+
+RCT_CUSTOM_VIEW_PROPERTY(isLoaderAllowed, BOOL, UIView){
+  [manager isLoaderAllowed: [json boolValue]];
+}
 
 @end
